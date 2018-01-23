@@ -21,29 +21,18 @@ public class Node<T> {
     }
 
     /**
-     * 构造结点
+     * 初始化构造一个头结点
      */
     public Node() {
-        // 这也是一种初始化的方式，不过我更喜欢后一种
-        // this(null,null);
         this.data = null;
         this.next = null;
     }
 
     /**
-     * 返回结点元素值对应的数据元素和地址域
-     * @return
-     */
-    @Override
-    public String toString() {
-        return "Node{" +
-                "data=" + data +
-                ", next=" + next +
-                '}';
-    }
-
-    /**
      * 比较两个结点值是否相等，覆盖Object类的equals(obj)方法
+     * obj == this 判断的是不是同一个对象
+     * obj instanceof Node 判断的是 obj 是不是 Node 的一个实例
+     * this.data.equals(((Node<T>)obj).data 判断的是两者之中的内容是不是相等
      * @param obj
      * @return
      */
