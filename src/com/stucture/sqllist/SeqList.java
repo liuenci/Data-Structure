@@ -1,8 +1,8 @@
-package com.stucture.sqlList;
+package com.stucture.sqllist;
 
 /**
  * @author cier
- * @date 2018/1/2210:57
+ * @date 2018/1/22 10:57
  */
 public class SeqList<T> implements ISeqList<T> {
     public static final int MAXSIZE = 20; // 存储空间的初始化大小
