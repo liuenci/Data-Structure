@@ -1,4 +1,4 @@
-package com.stucture.sqllist;
+package com.stucture.list.sqllist;
 
 import java.util.Random;
 

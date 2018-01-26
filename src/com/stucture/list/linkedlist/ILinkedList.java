@@ -1,4 +1,4 @@
-package com.stucture.linkedlist;
+package com.stucture.list.linkedlist;
 
 /**
  * 泛型参数表示数据元素的数据类型，提高了程序的可扩展性

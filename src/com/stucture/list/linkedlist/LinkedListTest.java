@@ -1,4 +1,4 @@
-package com.stucture.linkedlist;
+package com.stucture.list.linkedlist;
 
 /**
  * @author cier

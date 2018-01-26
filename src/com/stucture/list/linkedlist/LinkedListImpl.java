@@ -1,4 +1,4 @@
-package com.stucture.linkedlist;
+package com.stucture.list.linkedlist;
 
 /**
  * 线性表的链式表示和实现，带头结点的单链表类，实现线性表接口

@@ -1,4 +1,4 @@
-package com.stucture.sqllist;
+package com.stucture.list.sqllist;
 
 /**
  * 线性表顺序存储结构的接口
