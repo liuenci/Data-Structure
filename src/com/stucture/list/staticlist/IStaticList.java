@@ -1,4 +1,4 @@
-package com.stucture.list.staticlist2;
+package com.stucture.list.staticlist;
 
 /**
  * @author cier

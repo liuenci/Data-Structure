@@ -1,4 +1,4 @@
-package com.stucture.list.staticlist2;
+package com.stucture.list.staticlist;
 
 /**
  * @author cier
@@ -7,7 +7,10 @@ package com.stucture.list.staticlist2;
 public class StaticListTest {
     public static void main(String[] args) {
         StaticListImpl<String> list = new StaticListImpl<String>();
+        System.out.println("当前备用链表的首结点的下标"+list.getBackupListFirstIndex());
         list.insert("甲");
+        System.out.println(list);
+        System.out.println("当前备用链表的首结点的下标"+list.getBackupListFirstIndex());
         list.insert("乙");
         /*list.insert("丙");
         list.insert("丁");

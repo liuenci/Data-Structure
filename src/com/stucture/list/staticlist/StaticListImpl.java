@@ -1,6 +1,4 @@
-package com.stucture.list.staticlist2;
-
-import java.util.Arrays;
+package com.stucture.list.staticlist;
 
 /**
  * @author cier
@@ -133,15 +131,8 @@ public class StaticListImpl<T> implements IStaticList<T> {
      */
     @Override
     public T remove(int i) {
-        if (i > MAXSIZE - 1) {
+        if (i < 1||i > MAXSIZE - 1 || i > length()) {
             return null;
-        }
-        if (i < 1) {
-            i = 1;
-        }
-        int l = length();
-        if (i > l) {
-            i = l;
         }
         int k = MAXSIZE - 1;
         // 找到第 i 个位置的前一个元素位置
@@ -151,7 +142,8 @@ public class StaticListImpl<T> implements IStaticList<T> {
         int m = 0;
         // 取出前一个元素的 cursor ,也就是 i
         m = node[k].getCursor();
-        // 将前一个数据元素的 cursor 设置为当前位置上的 cursor,即让当前元素的上一个元素的 cursor 指向当前元素的下一个元素
+        // 将前一个数据元素的 cursor 设置为当前位置上的 cursor,
+        // 即让当前元素的上一个元素的 cursor 指向当前元素的下一个元素
         node[k].setCursor(node[m].getCursor());
         // 将删除的元素空间回收至备用链表，并将删除位置作为添加元素的有限存储空间
         return increaseSpaceToBackupList(m);
