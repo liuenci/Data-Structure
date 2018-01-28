@@ -57,16 +57,16 @@ public class CircularList {
      * @param node
      */
     public void addNode(int i, Node node) {
-        if (i > size) {
-            addTail(node);
-            return;
-        } else if (i <= 1) {
+        if (size == 0) {
             addHead(node);
             return;
-        } else {
-            if (size == 0) {
-                node.setNext(node);
-                head = tail = node;
+        }else {
+            if (i > size) {
+                addTail(node);
+                return;
+            } else if (i <= 1) {
+                addHead(node);
+                return;
             } else {
                 int index = 1;
                 Node nd = head;
@@ -77,8 +77,9 @@ public class CircularList {
                 node.setNext(nd.getNext());
                 nd.setNext(node);
             }
+            size++;
         }
-        size++;
+
     }
 
     /**
@@ -153,20 +154,5 @@ public class CircularList {
             e.printStackTrace();
         }
 
-    }
-
-    @Override
-    public String toString() {
-        Node node = head;
-        StringBuffer stringBuffer = new StringBuffer();
-        while (node.getNext() != head) {
-            stringBuffer.append(node.getData());
-            stringBuffer.append("->");
-            node = node.getNext();
-        }
-        stringBuffer.append(node.getData());
-        stringBuffer.append("->");
-        stringBuffer.append(head.getData());
-        return stringBuffer.toString();
     }
 }
