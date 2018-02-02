@@ -52,6 +52,7 @@ public class SequenceStackImpl implements ISequenceStack{
         // 首先判断栈是否为空
         if (isEmpty()){
             System.out.println("栈为空");
+            return null;
         }
         Object obj = stack[top];
         stack[top] = null;
