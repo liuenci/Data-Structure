@@ -4,7 +4,7 @@ package com.stucture.stack.link;
  * @author cier
  * @date 2018/2/2 12:05
  */
-public interface IListedStack {
+public interface ILinkedStack {
     /**
      * 入栈
      * @param object

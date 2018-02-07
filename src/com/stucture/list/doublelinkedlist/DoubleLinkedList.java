@@ -97,6 +97,7 @@ public class DoubleLinkedList<T> {
 
     /**
      * 查找链式线性表中指定元素的索引
+     *
      * @param element
      * @return
      */
@@ -126,7 +127,7 @@ public class DoubleLinkedList<T> {
                 // 获取插入点的结点
                 Node next = prev.next;
                 // 让新结点的 next 引用指向 next 结点， prev 引用指向 prev 结点
-                Node newNode = new Node(element,prev,next);
+                Node newNode = new Node(element, prev, next);
                 // 让 prev 的 next 结点指向新结点
                 prev.next = newNode;
                 // 让 prev 的下一个结点的 prev 指向新结点
@@ -138,12 +139,13 @@ public class DoubleLinkedList<T> {
 
     /**
      * 尾插法添加新结点
+     *
      * @param element
      */
     public void add(T element) {
         // 如果该链表是空链表
         if (head == null) {
-            head = new Node(element,null,null);
+            head = new Node(element, null, null);
             tail = head;
         } else {
             // 创建新的结点，新结点的 prev 指向 tail 结点
@@ -156,11 +158,12 @@ public class DoubleLinkedList<T> {
 
     /**
      * 使用头插法插入新结点
+     *
      * @param element
      */
     public void addAtHead(T element) {
         // 创建新结点指向原来的 head 结点
-        head = new Node(element,null,head);
+        head = new Node(element, null, head);
         // 如果插入之前是空链表
         if (tail == null) {
             tail = head;
@@ -170,18 +173,18 @@ public class DoubleLinkedList<T> {
 
     /**
      * 删除双向链表中指定索引处的元素
+     *
      * @param index
      * @return
      */
-    public T delete(int index) {
+    public void delete(int index) {
         if (size == 0) {
             System.out.println("该链表是空链表无法删除");
-        }else if (index < 0 || index > size - 1) {
+        } else if (index < 0 || index > size - 1) {
             System.out.println("删除的位置不合法");
-            return null;
         }
         Node node = null;
-        if (index == 0) {
+        if (index == 1) {
             node = head;
             head = head.next;
             head.prev = null;
@@ -193,7 +196,7 @@ public class DoubleLinkedList<T> {
             // 让被删除结点的 next 指向被删除结点的下一个结点
             prev.next = node.next;
             // 让被删除结点的下一个结点的 prev 指向 prev 结点
-            if (node.next!=null) {
+            if (node.next != null) {
                 node.next.prev = prev;
             }
             // 将被删除结点的 prev,next 引用赋给 null
@@ -201,29 +204,30 @@ public class DoubleLinkedList<T> {
             node.next = null;
         }
         size--;
-        return node.data;
     }
 
     /**
      * 删除链表中最后一个元素
+     *
      * @return
      */
-    public T remove(){
-        return delete(size - 1);
+    public void remove() {
+        delete(size - 1);
     }
 
     /**
      * 判断链表是否为空链表
+     *
      * @return
      */
-    public boolean empty(){
+    public boolean empty() {
         return size == 0;
     }
 
     /**
      * 清空链表
      */
-    public void clear(){
+    public void clear() {
         head = null;
         tail = null;
         size = 0;
@@ -235,11 +239,11 @@ public class DoubleLinkedList<T> {
             return "[]";
         } else {
             StringBuffer stringBuffer = new StringBuffer("[");
-            for (Node node = head; node!= null;node = node.next) {
+            for (Node node = head; node != null; node = node.next) {
                 stringBuffer.append(node.data + ",");
             }
             int len = stringBuffer.length();
-            return stringBuffer.delete(len -1,len).append("]").toString();
+            return stringBuffer.delete(len - 1, len).append("]").toString();
         }
     }
 }

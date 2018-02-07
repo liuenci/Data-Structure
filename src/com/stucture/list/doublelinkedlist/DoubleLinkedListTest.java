@@ -14,7 +14,7 @@ public class DoubleLinkedListTest {
         System.out.println(list);
         list.insert("cccc",1);
         System.out.println(list);
-        list.delete(2);
+        list.delete(1);
         System.out.println(list);
         System.out.println(list.locate("cccc"));
         System.out.println(list.get(1));

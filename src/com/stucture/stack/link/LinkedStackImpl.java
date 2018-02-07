@@ -4,7 +4,7 @@ package com.stucture.stack.link;
  * @author cier
  * @date 2018/2/2 12:07
  */
-public class LinkedStackImpl implements IListedStack{
+public class LinkedStackImpl implements ILinkedStack {
     Node head; // 栈顶指针
     int size; // 结点的个数
 
