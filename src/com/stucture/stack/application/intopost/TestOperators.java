@@ -11,7 +11,7 @@ public class TestOperators {
         Operators op = new Operators();
         String expression = "9 + ( 3 - 1 ) * 3 + 10 / 2";
         ArrayList<String> res = op.getHZBDS(expression);
-        System.out.println("后缀表达式：");
+        System.out.print("后缀表达式：");
         for (String string : res) {
             System.out.print(string + " ");
         }
