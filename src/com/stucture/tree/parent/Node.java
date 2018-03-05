@@ -1,4 +1,4 @@
-package com.stucture.tree.parentalrepresentation;
+package com.stucture.tree.parent;
 
 /**
  * created by cier on 2018/3/4 11:15

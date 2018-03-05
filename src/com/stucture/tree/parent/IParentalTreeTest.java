@@ -1,6 +1,5 @@
-package com.stucture.tree.parentalrepresentation;
+package com.stucture.tree.parent;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

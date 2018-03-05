@@ -1,4 +1,4 @@
-package com.stucture.tree.parentalrepresentation;
+package com.stucture.tree.parent;
 
 import java.util.List;
 
