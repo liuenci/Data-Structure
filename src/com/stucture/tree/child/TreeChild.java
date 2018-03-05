@@ -130,6 +130,23 @@ public class TreeChild<E> {
      * @param node
      * @return
      */
+    /*public int getDeepth(Node<E> node) {
+        if (node.first == null) {
+            return 1;
+        } else {
+            int max = 0;
+            ChildNode next = node.first;
+            while (next != null) {
+                // 获取以其子结点为根的子树的深度
+                int temp = this.getDeepth(nodes[next.pos]);
+                if (temp > max) {
+                    max = temp;
+                }
+                next = next.next;
+            }
+            return max + 1;
+        }
+    }*/
     public int getDeepth(Node<E> node) {
         if (node.first == null) {
             return 1;
